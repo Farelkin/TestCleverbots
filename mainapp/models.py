@@ -5,4 +5,3 @@ class Snippet(models.Model):
     place = models.CharField(max_length=100, blank=True, default='')
     image = models.ImageField(upload_to='photo')
     date = models.DateTimeField(auto_now=True)
-
