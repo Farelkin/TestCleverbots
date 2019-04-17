@@ -9,5 +9,6 @@ class SnippetViewSet(viewsets.ModelViewSet):
     queryset = Snippet.objects.all()
     serializer_class = SnippetSerializer
     filter_backends = (DjangoFilterBackend, filters.SearchFilter)
-    filterset_fields = ('date', 'size')
-    search_fields = ('date', 'size')
+    filterset_fields = ('date',)
+    search_fields = ('date',)
+
