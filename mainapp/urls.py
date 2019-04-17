@@ -1,14 +1,7 @@
-# from mainapp import views
-# from django.urls import path
-#
-#
-# urlpatterns = [
-#     path('snippets/', views.SnippetList.as_view()),
-#     path('snippets/<int:pk>/', views.SnippetDetail.as_view()),
-# ]
-
+from django.conf.urls.static import static
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from cleverbots import settings
 from mainapp import views
 
 # Create a router and register our viewsets with it.
@@ -19,3 +12,5 @@ router.register(r'snippets', views.SnippetViewSet)
 urlpatterns = [
     path('', include(router.urls)),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
