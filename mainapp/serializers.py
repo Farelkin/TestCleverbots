@@ -14,4 +14,5 @@ class SnippetSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'place', 'image', 'date', 'size2', 'size',)
 
     def get_image_size(self, obj):
+        print(type(os.path.getsize(settings.BASE_DIR + obj.image.url)))
         return os.path.getsize(settings.BASE_DIR + obj.image.url)
