@@ -6,11 +6,11 @@ from mainapp import views
 
 # Create a router and register our viewsets with it.
 router = DefaultRouter()
-router.register(r'snippets', views.SnippetViewSet)
+router.register(r'photos', views.SnippetViewSet)
 
 # The API URLs are now determined automatically by the router.
 urlpatterns = [
-    path('', include(router.urls)),
+    path('service/', include(router.urls)),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
