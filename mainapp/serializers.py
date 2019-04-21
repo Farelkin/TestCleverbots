@@ -1,18 +1,9 @@
 from rest_framework import serializers
 from mainapp.models import Snippet
-import os
-from cleverbots import settings
 
 
 class SnippetSerializer(serializers.HyperlinkedModelSerializer):
 
-    # size2 = serializers.SerializerMethodField('get_image_size')
-    # print(type(size2))
-
     class Meta:
         model = Snippet
-        fields = ('place', 'image', 'date',)
-
-    def get_image_size(self, obj):
-        print(type(os.path.getsize(settings.BASE_DIR + obj.image.url)))
-        return os.path.getsize(settings.BASE_DIR + obj.image.url)
+        fields = ('place', 'image', 'date', 'size')
