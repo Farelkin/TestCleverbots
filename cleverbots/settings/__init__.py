@@ -22,3 +22,5 @@ if DJANGO_MODULE_STR == 'local':
     from .local_settings import *
 elif DJANGO_MODULE_STR == 'production':
     from .production import *
+else:
+    from .docker import *
