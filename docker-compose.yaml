@@ -18,9 +18,8 @@ services:
           - "80:8080"
 # монтируем только те директории, в которых лежит статика, т.к. nginx с динамикой не будет работать. Также директорию с логами и файл настройки, который мы подготовили.
         volumes:
-            - ./<project>/static:/srv/www/<project>/static
-            - ./<project>/media:/srv/www/<project>/media
-            - ./<project>/logs:/srv/www/<project>/logs
+            - ./cleverbots/static:/home/cleverbots/static;
+            - ./cleverbots/media:/home/cleverbots/media;
             - ./docker/nginx:/etc/nginx/conf.d
 # и nginx зависит от контейнера python. Т.е. python должен быть запущен первым
         depends_on:
@@ -30,10 +29,10 @@ services:
 # указываем откуда собирать образ
         build:
             context: .
-            dockerfile: docker/python/Dockerfile
+            dockerfile: /home/docker/python/Dockerfile
 # монтируем директорию проекта
         volumes:
-            - ./<project>:/srv/www/<project>
+            - ./cleverbots:/home/cleverbots
         expose:
           - 8000
         ports:
