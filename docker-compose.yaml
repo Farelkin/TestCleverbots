@@ -5,26 +5,27 @@ volumes:
     pgdata:
         driver: local
 services:
+#-----------------nginx-----------------------
     nginx:
 # при падении будет стараться подняться
         restart: always
 # только свежий nginx
         image: nginx:latest
-# слушает порт 8080
+# слушает порт 80
         expose:
-          - 8080
-# мапаем порт 80 на его 8080. Тогда сайт будет доступен по адресу localhost. Убедись, что порт у тебя не занят.
+          - 80
         ports:
-          - "80:8080"
+          - "80:80"
 # монтируем только те директории, в которых лежит статика, т.к. nginx с динамикой не будет работать. Также директорию с логами и файл настройки, который мы подготовили.
         volumes:
             - ./cleverbots/static:/home/cleverbots/static;
             - ./cleverbots/media:/home/cleverbots/media;
-            - ./docker/nginx:/etc/nginx/conf.d
+            - ./docker/nginx:/home/cleverbots/docker/nginx/cleverbots.conf
 # и nginx зависит от контейнера python. Т.е. python должен быть запущен первым
         depends_on:
-            - python
-    python:
+            - django
+#-----------------django-----------------------
+    django:
         restart: always
 # указываем откуда собирать образ
         build:
@@ -39,16 +40,5 @@ services:
             - 8000:8000
 # запускаем gunicorn
         command: "gunicorn -c gunicorn.py cleverbots.wsgi"
-    postgres:
-# Ниже даже расписывать не хочу, насколько все просто: логин, пароль, БД, порты и т.д.
-        image: postgres:9.5.16
-        restart: always
-        ports:
-            - 5432:5432
-        environment:
-            POSTGRES_USER: bots
-            POSTGRES_PASSWORD: cleverbots123
-            POSTGRES_DB: cleverbots
-            PGDATA: /var/lib/postgresql/data
-        volumes:
-            - pgdata:/var/lib/postgresql/data
+#-----------------postgres---------------------
+
