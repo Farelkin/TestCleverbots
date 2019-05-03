@@ -1,0 +1,39 @@
+version: '3'
+
+volumes:
+    pgdata:
+        driver: local
+services:
+#-----------------nginx-----------------------
+    nginx:
+        restart: always
+        image: nginx:latest
+        expose:
+          - 8080
+        ports:
+          - "80:8080"
+# монтируем только те директории, в которых лежит статика, т.к. nginx с динамикой не будет работать. Также директорию с логами и файл настройки, который мы подготовили.
+        volumes:
+            - ./cleverbots/static:/home/cleverbots/static
+            - ./cleverbots/media:/home/cleverbots/media
+            - ./cleverbots/logs:/home/cleverbots/logs
+            - ./docker/nginx:/home/cleverbots/docker/nginx/cleverbots.conf
+        depends_on:
+            - django
+#-----------------django-----------------------
+    django:
+        restart: always
+        build:
+            context: .
+            dockerfile: /home/docker/django/Dockerfile
+# монтируем директорию проекта
+        volumes:
+            - ./cleverbots:/home/cleverbots
+        expose:
+          - 8000
+        ports:
+            - 8000:8000
+# запускаем gunicorn
+        command: "gunicorn -c gunicorn.py cleverbots.wsgi"
+
+
