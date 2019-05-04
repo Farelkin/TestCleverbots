@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a651a0e9-c89e-48bd-936c-38b91a3fb39f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cleverbots/mainapp/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cleverbots/mainapp/tests/test_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cleverbots/mainapp/tests/test_urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cleverbots/mainapp/tests1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cleverbots/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cleverbots/static/test/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/nginx/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cleverbots/cleverbots/settings/docker.py" beforeDir="false" afterPath="$PROJECT_DIR$/cleverbots/cleverbots/settings/docker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cleverbots/mainapp/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cleverbots/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cleverbots/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleverbots/mainapp/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleverbots/mainapp/tests/test_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleverbots/mainapp/tests/test_urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleverbots/mainapp/tests1.py" beforeDir="false" afterPath="$PROJECT_DIR$/cleverbots/mainapp/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleverbots/pytest.ini" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,22 +32,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/tests1.py">
+        <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            <state relative-caret-position="275">
+              <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cleverbots/pytest.ini">
+        <entry file="file://$PROJECT_DIR$/cleverbots/BD-settings.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+            <state relative-caret-position="102">
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,7 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cleverbots/cleverbots/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -73,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="32" />
+            <state relative-caret-position="136">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -83,19 +88,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/tests/test_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -103,8 +99,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+            <state relative-caret-position="204">
+              <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,15 +137,15 @@
         <option value="$PROJECT_DIR$/cleverbots/mainapp/tests/test_model.py" />
         <option value="$PROJECT_DIR$/cleverbots/mainapp/tests/__init__.py" />
         <option value="$PROJECT_DIR$/cleverbots/pytest.ini" />
-        <option value="$PROJECT_DIR$/cleverbots/mainapp/tests.py" />
         <option value="$PROJECT_DIR$/cleverbots/mainapp/tests/test_urls.py" />
         <option value="$PROJECT_DIR$/cleverbots/mainapp/tests1.py" />
+        <option value="$PROJECT_DIR$/cleverbots/mainapp/tests.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1080" />
-    <option name="y" value="55" />
+    <option name="x" value="1148" />
+    <option name="y" value="75" />
     <option name="width" value="1395" />
     <option name="height" value="972" />
   </component>
@@ -177,8 +176,14 @@
               <item name="TestCleverbots" type="b2602c69:ProjectViewProjectNode" />
               <item name="TestCleverbots" type="462c0819:PsiDirectoryNode" />
               <item name="cleverbots" type="462c0819:PsiDirectoryNode" />
-              <item name="mainapp" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TestCleverbots" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestCleverbots" type="462c0819:PsiDirectoryNode" />
+              <item name="cleverbots" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -201,6 +206,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GeekBrains\Python_Dev\TestCleverbots\cleverbots" />
       <recent name="D:\GeekBrains\Python_Dev\TestCleverbots\cleverbots\static\test" />
       <recent name="D:\GeekBrains\Python_Dev\TestCleverbots" />
     </key>
@@ -229,16 +235,21 @@
       <updated>1556716109015</updated>
       <workItem from="1556716112739" duration="4479000" />
       <workItem from="1556813316560" duration="12509000" />
+      <workItem from="1556871032935" duration="1060000" />
+      <workItem from="1556881918266" duration="614000" />
+      <workItem from="1556966656836" duration="2766000" />
+      <workItem from="1556983895478" duration="8291000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16065000" />
+    <option name="totallyTimeSpent" value="28796000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1080" y="55" width="1395" height="972" extended-state="0" />
+    <frame x="1148" y="75" width="1395" height="972" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2164794" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22846442" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -252,7 +263,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3297362" />
       <window_info anchor="bottom" id="File Transfer" order="9" weight="0.3297362" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29082242" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29082242" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32896304" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -317,13 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cleverbots/cleverbots/settings/local_settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -334,62 +338,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cleverbots/cleverbots/urls.py">
+    <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/tests/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/cleverbots/pytest.ini" />
+    <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/tests/test_urls.py" />
+    <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/tests/test_model.py" />
+    <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cleverbots/pytest.ini">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/tests/test_urls.py">
+    <entry file="file://$PROJECT_DIR$/cleverbots/BD-settings.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="28" lean-forward="true" selection-start-column="2" selection-end-line="6" selection-end-column="28" />
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/tests/test_model.py">
+    <entry file="file://$PROJECT_DIR$/cleverbots/static/test/favicon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cleverbots/test_db.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/tests1.py">
+    <entry file="file://$PROJECT_DIR$/cleverbots/cleverbots/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cleverbots/mainapp/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
