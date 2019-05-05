@@ -5,21 +5,21 @@ volumes:
         driver: local
 services:
 #-----------------nginx-----------------------
-#    nginx:
-#        restart: always
-#        image: nginx:latest
-#        expose:
-#          - 8080
-#        ports:
-#          - "80:8080"
-## монтируем только те директории, в которых лежит статика, т.к. nginx с динамикой не будет работать. Также директорию с логами и файл настройки, который мы подготовили.
-#        volumes:
-#            - ./cleverbots/static:/home/cleverbots/static
-#            - ./cleverbots/media:/home/cleverbots/media
-#            - ./cleverbots/logs:/home/cleverbots/logs
-#            - ./docker/nginx:/home/cleverbots/docker/nginx/cleverbots.conf
-#        depends_on:
-#            - django
+    nginx:
+        restart: always
+        image: nginx:latest
+        ports:
+          - "80:80"
+# монтируем только те директории, в которых лежит статика, т.к. nginx с динамикой не будет работать. Также директорию с логами и файл настройки, который мы подготовили.
+        volumes:
+            - ./cleverbots/static:/home/cleverbots/static
+            - ./cleverbots/media:/home/cleverbots/media
+            - ./cleverbots/logs:/home/cleverbots/logs
+            - ./docker/nginx:/home/cleverbots/docker/nginx/cleverbots.conf
+            - ./docker/nginx:/etc/nginx/conf.d
+        depends_on:
+            - django
+        command: nginx -g 'daemon off;'
 #-----------------django-----------------------
     django:
         restart: always
@@ -32,7 +32,7 @@ services:
         ports:
             - 8000:8000
 # запускаем gunicorn
-#        command: "gunicorn -c gunicorn.py cleverbots.wsgi"
-        command: "gunicorn -c gunicorn.conf cleverbots.wsgi"
+        command: "gunicorn -c gunicorn.py cleverbots.wsgi"
+#        command: "gunicorn -c gunicorn.conf cleverbots.wsgi"
 
 

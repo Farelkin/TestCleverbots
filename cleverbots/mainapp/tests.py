@@ -21,10 +21,10 @@ class UploadImageTests(TestCase):
         super(UploadImageTests, self).setUp()
 
     def test_valid_form(self):
-        avatar = create_image(None, 'avatar.png')
-        avatar_file = SimpleUploadedFile('favicon.png', avatar.getvalue())
+        avatar = create_image(None, 'malevich_square.png')
+        avatar_file = SimpleUploadedFile('malevich_square.png', avatar.getvalue())
         data = {'place': 'test place', 'image': avatar_file}
-        response = self.client.post('/service/photos/', data, follow=True)
+        response = self.client.post('/service/photo/', data, follow=True)
         self.assertEquals(response.status_code, 201)
 
 
