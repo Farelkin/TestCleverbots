@@ -6,8 +6,8 @@ from . import views
 
 # Create a router and register our viewsets with it.
 router = DefaultRouter()
-router.register(r'photos', views.SnippetViewSet)
-router.register(r'photo', views.UploadPhotoView)
+router.register(r'photos', views.SnippetViewSet, 'photos')
+router.register(r'photo', views.UploadPhotoView, 'photo')
 
 # The API URLs are now determined automatically by the router.
 urlpatterns = [

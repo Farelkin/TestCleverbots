@@ -11,7 +11,7 @@ class SnippetViewSet(viewsets.ModelViewSet):
     filter_backends = (DjangoFilterBackend, filters.SearchFilter)
     filterset_fields = ('date', 'size')
     search_fields = ('date', 'size')
-    http_method_names = ['get', 'put', 'patch', 'head', 'delete', 'options']
+    http_method_names = ['get']
 
 
 class UploadPhotoView(viewsets.ModelViewSet):
