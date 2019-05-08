@@ -26,9 +26,7 @@ services:
             - 8000:8000
         depends_on:
             - postgres
-        command: ['./wait-for-it.sh postgres:5432 -- echo "postgres is up"',
-                  '| gunicorn -c gunicorn.py cleverbots.wsgi',
-                  '| python /home/cleverbots/manage.py migrate']
+        command: gunicorn -c gunicorn.py cleverbots.wsgi
 #-----------------nginx-----------------------
     nginx:
         restart: always
