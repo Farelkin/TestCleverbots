@@ -5,4 +5,4 @@ WORKDIR /home/cleverbots
 
 RUN pip install -r requirements.txt
 RUN pip install psycopg2-binary
-RUN python manage.py migrate
+#RUN python manage.py migrate

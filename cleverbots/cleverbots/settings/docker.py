@@ -4,7 +4,7 @@ from django.core.exceptions import ImproperlyConfigured
 BASE_DIR = os.path.dirname(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-with open(os.path.dirname(os.path.join(BASE_DIR, 'secrets.json'))) as secrets_file:
+with open(os.path.join(BASE_DIR, 'secrets.json')) as secrets_file:
     secrets = json.load(secrets_file)
 
 
@@ -70,7 +70,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'USER': 'bots',
         'PASSWORD': get_secret('DB_PASSWORD'),
-        'HOST': '151.248.122.170',
+        'HOST': 'postgres',
         'PORT': '5432',
     }
 }
@@ -102,9 +102,9 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = '/home/cleverbots/static'
+# STATIC_ROOT = '/home/cleverbots/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

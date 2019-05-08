@@ -4,13 +4,37 @@ volumes:
     pgdata:
         driver: local
 services:
+#-----------------postgres-----------------------
+    postgres:
+        image: postgres:9.3.22
+        restart: always
+        ports:
+            - 5432:5432
+        volumes:
+            - ./docker/postgresql/init.sql:/docker-entrypoint-initdb.d/init.sql
+#-----------------django-----------------------
+    django:
+        restart: always
+        build:
+            context: .
+            dockerfile: /home/docker/django/Dockerfile
+        volumes:
+            - ./cleverbots:/home/cleverbots
+            - ./cleverbots/static:/home/cleverbots/static
+            - ./cleverbots/media:/home/cleverbots/media
+        ports:
+            - 8000:8000
+        depends_on:
+            - postgres
+        command: ['./wait-for-it.sh postgres:5432 -- echo "postgres is up"',
+                  '| gunicorn -c gunicorn.py cleverbots.wsgi',
+                  '| python /home/cleverbots/manage.py migrate']
 #-----------------nginx-----------------------
     nginx:
         restart: always
         image: nginx:latest
         ports:
-          - "80:80"
-# монтируем только те директории, в которых лежит статика, т.к. nginx с динамикой не будет работать. Также директорию с логами и файл настройки, который мы подготовили.
+          - 80:80
         volumes:
             - ./cleverbots/static:/home/cleverbots/static
             - ./cleverbots/media:/home/cleverbots/media
@@ -20,19 +44,5 @@ services:
         depends_on:
             - django
         command: nginx -g 'daemon off;'
-#-----------------django-----------------------
-    django:
-        restart: always
-        build:
-            context: .
-            dockerfile: /home/docker/django/Dockerfile
-# монтируем директорию проекта
-        volumes:
-            - ./cleverbots:/home/cleverbots
-        ports:
-            - 8000:8000
-# запускаем gunicorn
-        command: "gunicorn -c gunicorn.py cleverbots.wsgi"
-#        command: "gunicorn -c gunicorn.conf cleverbots.wsgi"
 
 
