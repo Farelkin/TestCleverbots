@@ -129,3 +129,6 @@ venv
 .env
 /cleverbots/secrets.json
 .idea
+/private_slave 1.ppk
+/private_slave 1_public
+
