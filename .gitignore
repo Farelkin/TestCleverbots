@@ -127,4 +127,5 @@ local_settings.py
 venv
 .venv
 .env
-/secrets.json
+/cleverbots/secrets.json
+.idea
